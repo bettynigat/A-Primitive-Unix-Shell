@@ -1,9 +1,9 @@
-Contents
-• Simple overview of Unix shell assignment: Ish
+
+Simple overview of Unix shell assignment: Ish
 • Ish development stages
-• Stage 1: lexical analysis
-• Stage 2: syntactic analysis (parsing)
-• Stage 3: execution
+  • Stage 1: lexical analysis
+  • Stage 2: syntactic analysis (parsing)
+  • Stage 3: execution
 • I/O redirection, Pipe operation, Signal Handling
 
 
