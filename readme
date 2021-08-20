@@ -1,4 +1,4 @@
-#Unix shell
+# Unix shell
 
 This project consists of implementing, we implement a primitive shell called “Ish”. The shell provide the following functionalities:-
 - Execute commands
