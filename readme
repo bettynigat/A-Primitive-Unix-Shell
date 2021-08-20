@@ -1,3 +1,11 @@
+#Unix shell
+
+In this project, we implement a primitive shell called “Ish”. The shell provide the following functionalities:-
+- Execute commands
+- Pipe operation
+- I/O Redirection
+- Signal handling
+
 
 Simple overview of Unix shell assignment: Ish
 • Ish development stages
