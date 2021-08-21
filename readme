@@ -1,18 +1,51 @@
-# Unix shell
- This is edited
+
+Unix shell
  
-This project consists of implementing, we implement a primitive shell called “Ish”. The shell provide the following functionalities:-
+In this project, we implement a primitive shell called “Ish”. The shell provides the following functionalities:-
 - Execute commands
 - Pipe operation
 - I/O Redirection
 - Signal handling
 
+The development stage of the unix shell is divided into three fundamental stages:- 
+  	1. lexical analysis
 
-Simple overview of Unix shell assignment: Ish
-• Ish development stages
-  • Stage 1: lexical analysis
-  • Stage 2: syntactic analysis (parsing)
-  • Stage 3: execution
-• I/O redirection, Pipe operation, Signal Handling
+		Input: character array
+		Output: token array
+		
+		We used the following methods
+		- fgets() to read input line
+		- isspace() to identity white-space character
+		- dynamic array data structure to handle 
+
+		Lexical analyzer also detect lexical errors
+			% “ls
+			% ls”
+			% ls” -al
+
+  	2. syntactic analysis (parsing)
+
+		Input: token array
+		Output: command(s)
+
+		- Syntactic analyzer also detect syntactic errors
+
+			% < one
+			% echo one >
+			% echo one > f1 > f2
+
+
+  	3. execution
+  		- This stages makes Ish to execute commands, which means, Ish program execute another program. 
+  		- This is done by letting child process run that program
+	
+		- we use system calls to execute commands
+		1. Create a child process via fork()
+		2. Let the child execute a command via execvp()
+		3. Parent process waits until the child finishes its work via wait()
+		4. If the child finishes, parent read next command and go back to 1
+
+
+We also implement I/O redirection, pipe operation and signal handling (for the signal types SIGINT and SIGQUIT). 
 
 
